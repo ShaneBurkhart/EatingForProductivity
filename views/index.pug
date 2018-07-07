@@ -4,8 +4,9 @@ include ./_mixins/landing-page
 block no_hero
 
 block variables
-    - var description = "About a year ago, I adopted an 8 year old labradoodle named Yogi. When I got him, he had serious separation anxiety, but now he's calm and relaxed at home.  This is the guide I used to train him."
-    - var fbImage = "http://loveyourbigdog.com/assets/images/yogi_still.jpg"
+    - var title = "We're creating a service that sends you weekly meal plans designed for sustained energy throughout your day.  Click the link to learn more!"
+    - var description = "We're creating a service that sends you weekly meal plans designed for sustained energy throughout your day.  Turn sluggish afternoons into productive hours with laser focus!"
+    - var fbImage = "http://eatingforproductivity.com/assets/images/guy-working-on-computer-with-hand-on-head.jpg"
     - var fbType = "article"
 
 block content
@@ -70,10 +71,19 @@ block content
             h3.bold.text-center Get notified when we launch!
             p We'll let you know when we launch so you can make every day as productive as possible without having to think about the food you eat!
 
-            form#email-form.ui.form(action="http://ref.loveyourbigdog.com/users/create", method="post")
-                .form-wrap
-                    input.email(type='text', name="user[email]", placeholder="Enter your email :)")
-                    input.g-recaptcha.submit(
+            form#email-form.ui.form(action="https://shaneburkhart.us15.list-manage.com/subscribe/post", method="post")
+                input(type="hidden" name="u" value="8c6e4ce8404562ca882805491")
+                input(type="hidden" name="id" value="25321ca51c")
+                .field
+                    label(for="MERGE1") First Name
+                    input(type="text" name="MERGE1" id="MERGE1" size="25" value="")
+
+                .field
+                    label(for="MERGE0") Email
+                    input(type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="")
+
+                .text-center
+                    input.ui.button.large.blue.g-recaptcha(
                         name="commit"
                         type="submit"
                         value="Let's eat!"
