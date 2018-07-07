@@ -1,0 +1,25 @@
+extends ./_layouts/landing-page-no-header
+include ./_mixins/landing-page
+
+block no_hero
+
+block variables
+    - var title = "Thank You! - Weekly Meal Plans Designed for High Energy Days"
+    - var description = "Thanks for signing up!  We'll let you know when we launch :)"
+
+block content
+    .section.red.micro
+        .small-container
+            .full
+                .header
+                    img.circle.outline.inline-block(src="/assets/images/logo.png" alt="Eating for Productivity. High energy meal plans sent to you weekly without you having to think about.")
+                    h2.text-center.bold.inline-block Eating for Productivity
+
+    .section.small
+        .small-container
+            .full
+                h1.text-center Thanks For Signing Up!
+
+                p.text-center We're really excited you are interested in our service! We'll be sure to keep you updated and notify you when we launch :)
+                p.text-center.italic You should receive a welcome email in just a moment.
+
