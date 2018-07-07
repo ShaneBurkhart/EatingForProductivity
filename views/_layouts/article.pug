@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        include ../_includes/head
+        block head
+
+    body#article
+        include ../_includes/site-header
+
+        main
+            .container
+                block content
+
+        include ../_includes/ga
+        include ../_includes/active-campaign

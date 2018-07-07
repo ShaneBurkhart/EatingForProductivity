@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        include ../_includes/head
+        block head
+
+    body#landing-page
+        include ../_includes/site-header
+
+        main
+            block no_hero
+                .hero
+                    block bg
+                        .bg(style="background-image: url('/assets/images/bg.png')")
+                    .overlay
+                    .content
+                        .container
+                            block hero
+
+            block content
+
+        include ../_includes/ga
+        include ../_includes/active-campaign

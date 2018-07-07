@@ -1,0 +1,17 @@
+version: '2.1'
+services:
+    nginx:
+        image: nginx
+        ports:
+            - 8080:80
+        volumes:
+            - ./nginx.dev.conf:/etc/nginx/nginx.conf
+            - ./public:/public
+    builder:
+        image: shaneburkhart/eatingforproductivity.com
+        volumes:
+            - ./views:/app/views
+            - ./public:/app/public
+            - ./assets:/app/assets
+            - ./Rakefile:/app/Rakefile
+        command: "rerun --background --pattern '*.{pug,scss}' rake gulp_build"
