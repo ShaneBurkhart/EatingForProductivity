@@ -26,7 +26,8 @@ ssh_prod:
 
 prod:
 	git pull origin master;
-	./prod.sh
+	# Not needed.
+	#./prod.sh
 
 deploy_prod:
 	ssh -A ubuntu@eatingforproductivity.com "cd ~/EatingForProductivity.com; make prod"
