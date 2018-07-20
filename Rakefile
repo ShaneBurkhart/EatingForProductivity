@@ -7,6 +7,6 @@ task :gulp_build do
     File.write("./public/#{File.basename(filename, '.pug')}.html", contents)
   end
 
-  `sass /app/assets/css/application.scss /app/public/assets/css/application.css`
+  `sass --style compressed /app/assets/css/application.scss /app/public/assets/css/application.css`
   `cp /app/assets/images/* /app/public/assets/images/.`
 end
