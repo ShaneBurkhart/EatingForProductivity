@@ -83,14 +83,4 @@ block content
                     input(type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="")
 
                 .text-center
-                    input.ui.button.large.blue.g-recaptcha(
-                        name="commit"
-                        type="submit"
-                        value="Let's eat!"
-                        data-sitekey="6LcsSlsUAAAAAC07KUDKpdwqa42lig6dYuvPHAgN"
-                        data-callback="onSubmit")
-
-                script.
-                    function onSubmit(token) {
-                        document.getElementById("email-form").submit();
-                    }
+                    input.ui.button.large.blue(name="commit" type="submit" value="Let's eat!")
